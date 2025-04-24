@@ -11,7 +11,7 @@ export class LineChartComponent {
   
   chartOptions: Highcharts.Options = {
     // Basic chart configuration
-    title: { text: 'Chart with Vertical Lines' },
+    title: { text: 'Chart with Lower/upper warnings/alarms' },
     series: [{
       type: 'line',
       data: [0, 10, 30, 20, 40, 50, 70, 60, 80, 90, 100]
@@ -24,7 +24,7 @@ export class LineChartComponent {
         width: 3,
         value: 2, // X-axis value where the line should appear
         label: {
-          text: 'first 10 meters',
+          text: 'lower alarm',
           align: 'left',
           style: {
             color: 'gray'
@@ -37,7 +37,7 @@ export class LineChartComponent {
         width: 3,
         value: 4, // X-axis value where the line should appear
         label: {
-          text: 'first 10 meters',
+          text: 'lower warning',
           align: 'left',
           style: {
             color: 'gray'
@@ -52,7 +52,7 @@ export class LineChartComponent {
         value: 6,
         //dashStyle: 'Dash', // Makes it a dashed line
         label: {
-          text: 'last 10 meters',
+          text: 'expected range of values',
           align: 'left',
           y: 50
         }
@@ -63,7 +63,7 @@ export class LineChartComponent {
         value: 8,
         //dashStyle: 'Dash', // Makes it a dashed line
         label: {
-          text: 'last 10 meters',
+          text: 'upper warning',
           align: 'left',
           y: 50
         }
@@ -73,7 +73,7 @@ export class LineChartComponent {
         value: 10,
         //dashStyle: 'Dash', // Makes it a dashed line
         label: {
-          text: 'last 10 meters',
+          text: 'upper alarm',
           align: 'left',
           y: 50
         }
